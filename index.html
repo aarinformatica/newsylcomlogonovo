@@ -1,0 +1,1343 @@
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Safe Your Life</title>
+
+    <!-- =====================================================
+         FONT AWESOME 4.7
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+
+    <!-- =====================================================
+         LEAFLET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         TELA DE LOGIN
+    ====================================================== -->
+
+    <section
+        id="loginScreen"
+        class="screen login-screen active"
+    >
+
+        <div class="energy-background">
+
+            <div class="energy-orb orb-one"></div>
+            <div class="energy-orb orb-two"></div>
+            <div class="energy-orb orb-three"></div>
+
+        </div>
+
+
+        <div class="login-card">
+
+            <div class="login-logo">
+
+                <img
+                    src="https://raw.githubusercontent.com/aarinformatica/incuindopushsyl/refs/heads/main/newlogosyl.png"
+                    alt="Safe Your Life"
+                >
+
+            </div>
+
+
+            <h1 class="brand-title">
+                Safe Your Life
+            </h1>
+
+
+            <div class="security-badge">
+
+                <i class="fa fa-shield"></i>
+
+                PLATAFORMA SEGURA
+
+            </div>
+
+
+            <div class="login-form">
+
+                <label for="userName">
+                    Nome de usuário
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <i class="fa fa-user"></i>
+
+                    <input
+                        id="userName"
+                        type="text"
+                        maxlength="40"
+                        autocomplete="name"
+                        placeholder="Digite seu nome"
+                    >
+
+                </div>
+
+
+                <button
+                    id="loginButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <i class="fa fa-lock"></i>
+
+                    <span>
+                        Logar
+                    </span>
+
+                    <i class="fa fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="login-security">
+
+                <i class="fa fa-lock"></i>
+
+                Ambiente protegido e monitorado
+
+            </div>
+
+        </div>
+
+
+        <footer class="login-footer">
+
+            <span>
+                © SYL - Todos os direitos reservados.
+            </span>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PRIMEIRA TELA DE CARREGAMENTO
+    ====================================================== -->
+
+    <section
+        id="loadingScreen"
+        class="screen loading-screen"
+    >
+
+        <div class="loading-content">
+
+            <div class="loading-logo">
+
+                <img
+                    src="https://raw.githubusercontent.com/aarinformatica/incuindopushsyl/refs/heads/main/newlogosyl.png"
+                    alt="Safe Your Life"
+                >
+
+            </div>
+
+
+            <h1 id="loadingGreeting">
+                Olá!
+            </h1>
+
+
+            <p>
+                Preparando seu ambiente seguro.
+            </p>
+
+
+            <div class="progress-container">
+
+                <div class="progress-header">
+
+                    <span id="loadingStatus">
+                        Inicializando plataforma...
+                    </span>
+
+                    <strong id="loadingPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        id="loadingProgress"
+                        class="progress-bar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="loading-security">
+
+                <i class="fa fa-shield"></i>
+
+                Conexão segura SYL
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AMBIENTE ATIVO
+    ====================================================== -->
+
+    <section
+        id="environmentScreen"
+        class="screen environment-screen"
+    >
+
+        <header class="app-header">
+
+            <div class="header-logo">
+
+                <img
+                    src="https://raw.githubusercontent.com/aarinformatica/incuindopushsyl/refs/heads/main/newlogosyl.png"
+                    alt="Safe Your Life"
+                >
+
+            </div>
+
+        </header>
+
+
+        <main class="environment-main">
+
+            <div class="environment-card">
+
+                <span class="environment-label">
+                    SAFE YOUR LIFE
+                </span>
+
+
+                <h1>
+
+                    Olá,
+
+                    <span id="environmentUserName">
+                        usuário
+                    </span>
+
+                </h1>
+
+
+                <h2>
+                    Sua segurança em primeiro lugar,
+                    a cada passo.
+                </h2>
+
+
+                <p>
+                    Bem-vindo ao ecossistema urbano
+                    inteligente SYL. Conectamos dados
+                    em tempo real e inteligência preventiva
+                    para proteger sua integridade.
+                </p>
+
+
+                <div class="environment-location">
+
+                    <i class="fa fa-map-marker"></i>
+
+                    <span>
+                        Acesso ao Painel
+                    </span>
+
+                </div>
+
+
+                <div class="environment-description">
+
+                    Entre no mapa tático e configure
+                    alertas de zona de risco.
+
+                </div>
+
+
+                <button
+                    id="accessPlatformButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>
+                        Acessar Plataforma
+                    </span>
+
+                    <i class="fa fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="environment-status">
+
+                <span class="status-marker"></span>
+
+                <span>
+                    Ambiente Ativo
+                </span>
+
+            </div>
+
+        </main>
+
+
+        <footer class="app-footer">
+
+            <span>
+                © SYL - Todos os direitos reservados.
+            </span>
+
+            <span id="environmentClock">
+                00:00:00
+            </span>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SEGUNDO CARREGAMENTO
+    ====================================================== -->
+
+    <section
+        id="moduleLoadingScreen"
+        class="screen module-loading-screen"
+    >
+
+        <div class="module-loading-content">
+
+            <div class="module-loading-icon">
+
+                <i class="fa fa-circle-o-notch fa-spin"></i>
+
+            </div>
+
+
+            <span class="module-loading-label">
+                MÓDULO OPERACIONAL
+            </span>
+
+
+            <h1>
+                Iniciando módulo
+            </h1>
+
+
+            <p>
+                Preparando os recursos necessários
+                para sua experiência.
+            </p>
+
+
+            <div class="progress-container">
+
+                <div class="progress-header">
+
+                    <span id="moduleLoadingStatus">
+                        Inicializando...
+                    </span>
+
+                    <strong id="moduleLoadingPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        id="moduleLoadingProgress"
+                        class="progress-bar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CENTRAL SYL
+    ====================================================== -->
+
+    <section
+        id="centralScreen"
+        class="screen central-screen"
+    >
+
+        <header class="app-header">
+
+            <div class="header-logo">
+
+                <img
+                    src="https://raw.githubusercontent.com/aarinformatica/incuindopushsyl/refs/heads/main/newlogosyl.png"
+                    alt="Safe Your Life"
+                >
+
+            </div>
+
+        </header>
+
+
+        <main class="central-main">
+
+            <div class="central-content">
+
+                <span class="module-badge">
+
+                    <i class="fa fa-circle"></i>
+
+                    MÓDULO OPERACIONAL
+
+                </span>
+
+
+                <h1>
+                    Central SYL
+                </h1>
+
+
+                <p>
+                    Selecione uma das opções para continuar.
+                </p>
+
+
+                <div class="central-menu">
+
+
+                    <!-- =================================================
+                         SITE OFICIAL
+                    ================================================== -->
+
+                    <button
+                        class="central-menu-button"
+                        data-action="official"
+                        type="button"
+                    >
+
+                        <span class="menu-button-left">
+
+                            <span class="menu-icon">
+
+                                <i class="fa fa-globe"></i>
+
+                            </span>
+
+
+                            <span class="menu-text">
+
+                                <strong>
+                                    Site Oficial
+                                </strong>
+
+                                <small>
+                                    Acesse informações sobre o SYL
+                                </small>
+
+                            </span>
+
+                        </span>
+
+
+                        <i class="fa fa-angle-right"></i>
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         MAPA
+                    ================================================== -->
+
+                    <button
+                        id="accessMapButton"
+                        class="central-menu-button"
+                        data-action="map"
+                        type="button"
+                    >
+
+                        <span class="menu-button-left">
+
+                            <span class="menu-icon">
+
+                                <i class="fa fa-map-marker"></i>
+
+                            </span>
+
+
+                            <span class="menu-text">
+
+                                <strong>
+                                    Acessar Mapa
+                                </strong>
+
+                                <small>
+                                    Visualize sua localização
+                                </small>
+
+                            </span>
+
+                        </span>
+
+
+                        <i class="fa fa-angle-right"></i>
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         AJUSTES
+                    ================================================== -->
+
+                    <button
+                        id="settingsButton"
+                        class="central-menu-button"
+                        data-action="settings"
+                        type="button"
+                    >
+
+                        <span class="menu-button-left">
+
+                            <span class="menu-icon">
+
+                                <i class="fa fa-cog"></i>
+
+                            </span>
+
+
+                            <span class="menu-text">
+
+                                <strong>
+                                    Ajustes
+                                </strong>
+
+                                <small>
+                                    Personalize sua experiência
+                                </small>
+
+                            </span>
+
+                        </span>
+
+
+                        <i class="fa fa-angle-right"></i>
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         SOBRE
+                    ================================================== -->
+
+                    <button
+                        class="central-menu-button"
+                        data-action="about"
+                        type="button"
+                    >
+
+                        <span class="menu-button-left">
+
+                            <span class="menu-icon">
+
+                                <i class="fa fa-info-circle"></i>
+
+                            </span>
+
+
+                            <span class="menu-text">
+
+                                <strong>
+                                    Sobre
+                                </strong>
+
+                                <small>
+                                    Conheça a plataforma SYL
+                                </small>
+
+                            </span>
+
+                        </span>
+
+
+                        <i class="fa fa-angle-right"></i>
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         DESCONECTAR
+                    ================================================== -->
+
+                    <button
+                        id="disconnectButton"
+                        class="central-menu-button disconnect-button"
+                        data-action="disconnect"
+                        type="button"
+                    >
+
+                        <span class="menu-button-left">
+
+                            <span class="menu-icon">
+
+                                <i class="fa fa-sign-out"></i>
+
+                            </span>
+
+
+                            <span class="menu-text">
+
+                                <strong>
+                                    Desconectar Terminal
+                                </strong>
+
+                                <small>
+                                    Encerrar sessão atual
+                                </small>
+
+                            </span>
+
+                        </span>
+
+
+                        <i class="fa fa-angle-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <footer class="app-footer">
+
+            <span>
+                © SYL - Todos os direitos reservados.
+            </span>
+
+            <span id="centralClock">
+                00:00:00
+            </span>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MODAL SITE OFICIAL
+    ====================================================== -->
+
+    <div
+        id="developmentModal"
+        class="development-modal"
+        aria-hidden="true"
+    >
+
+        <div class="development-overlay"></div>
+
+
+        <div
+            class="development-dialog"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <button
+                id="developmentCloseButton"
+                class="development-close-button"
+                type="button"
+                aria-label="Fechar"
+            >
+
+                <i class="fa fa-times"></i>
+
+            </button>
+
+
+            <div class="development-icon">
+
+                <i class="fa fa-code"></i>
+
+            </div>
+
+
+            <span class="development-label">
+                SITE OFICIAL
+            </span>
+
+
+            <div class="development-content">
+
+                <h2>
+                    Site em desenvolvimento
+                </h2>
+
+                <p>
+                    Em breve o conteúdo será
+                    disponibilizado!
+                </p>
+
+            </div>
+
+
+            <button
+                id="developmentOkButton"
+                class="development-ok-button"
+                type="button"
+            >
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MODAL AJUSTES
+    ====================================================== -->
+
+    <div
+        id="settingsModal"
+        class="settings-modal"
+        aria-hidden="true"
+    >
+
+        <div class="settings-overlay"></div>
+
+
+        <div
+            class="settings-dialog"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <!-- CABEÇALHO -->
+
+            <div class="settings-header">
+
+                <div class="settings-header-info">
+
+                    <div class="settings-main-icon">
+
+                        <i class="fa fa-cog"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="settings-label">
+                            CONFIGURAÇÕES
+                        </span>
+
+                        <h2 id="settingsTitle">
+                            Ajustes
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="settingsCloseButton"
+                    class="settings-close-button"
+                    type="button"
+                    aria-label="Fechar"
+                >
+
+                    <i class="fa fa-times"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- COR DO MARCADOR -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <div>
+
+                        <h3>
+                            Cor do Marcador
+                        </h3>
+
+                        <p>
+                            Personalize a cor exibida
+                            no seu marcador.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="marker-color-control">
+
+                    <div
+                        id="markerColorPreview"
+                        class="marker-color-preview"
+                    ></div>
+
+
+                    <div class="marker-color-info">
+
+                        <strong>
+                            Cor selecionada
+                        </strong>
+
+                        <span id="markerColorValue">
+                            #00B894
+                        </span>
+
+                    </div>
+
+
+                    <input
+                        id="markerColor"
+                        type="color"
+                        value="#00b894"
+                        aria-label="Escolher cor do marcador"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MODO DE NOTIFICAÇÃO -->
+
+            <div class="settings-section">
+
+                <div class="settings-section-heading">
+
+                    <div>
+
+                        <h3>
+                            Modo da notificação
+                        </h3>
+
+                        <p>
+                            Escolha como deseja receber
+                            notificações.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-options">
+
+
+                    <!-- SOMENTE ÁUDIO -->
+
+                    <label class="notification-option">
+
+                        <input
+                            type="radio"
+                            name="notificationMode"
+                            value="audio"
+                        >
+
+
+                        <span class="notification-option-card">
+
+                            <span class="notification-option-icon">
+
+                                <i class="fa fa-volume-up"></i>
+
+                            </span>
+
+
+                            <span class="notification-option-text">
+
+                                <strong>
+                                    Somente áudio
+                                </strong>
+
+                                <small>
+                                    Emitir som ao receber uma notificação.
+                                </small>
+
+                            </span>
+
+
+                            <span class="notification-radio"></span>
+
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- SOMENTE VIBRAR -->
+
+                    <label class="notification-option">
+
+                        <input
+                            type="radio"
+                            name="notificationMode"
+                            value="vibrate"
+                        >
+
+
+                        <span class="notification-option-card">
+
+                            <span class="notification-option-icon">
+
+                                <i class="fa fa-mobile"></i>
+
+                            </span>
+
+
+                            <span class="notification-option-text">
+
+                                <strong>
+                                    Somente vibrar
+                                </strong>
+
+                                <small>
+                                    Vibrar o dispositivo ao receber.
+                                </small>
+
+                            </span>
+
+
+                            <span class="notification-radio"></span>
+
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- ÁUDIO E VIBRAR -->
+
+                    <label class="notification-option">
+
+                        <input
+                            type="radio"
+                            name="notificationMode"
+                            value="audio-vibrate"
+                        >
+
+
+                        <span class="notification-option-card">
+
+                            <span class="notification-option-icon">
+
+                                <i class="fa fa-volume-up"></i>
+
+                                <i class="fa fa-mobile"></i>
+
+                            </span>
+
+
+                            <span class="notification-option-text">
+
+                                <strong>
+                                    Áudio e vibrar
+                                </strong>
+
+                                <small>
+                                    Utilizar som e vibração.
+                                </small>
+
+                            </span>
+
+
+                            <span class="notification-radio"></span>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RODAPÉ -->
+
+            <div class="settings-footer">
+
+                <button
+                    id="settingsCancelButton"
+                    class="settings-cancel-button"
+                    type="button"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    id="applySettingsButton"
+                    class="settings-apply-button"
+                    type="button"
+                >
+
+                    <i class="fa fa-check"></i>
+
+                    Aplicar configurações
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ESTADO: APLICANDO
+            ================================================== -->
+
+            <div
+                id="settingsApplying"
+                class="settings-state-overlay"
+            >
+
+                <div class="settings-state-icon">
+
+                    <i class="fa fa-circle-o-notch fa-spin"></i>
+
+                </div>
+
+
+                <h3>
+                    Aplicando configurações...
+                </h3>
+
+
+                <p>
+                    Sincronizando suas preferências
+                </p>
+
+
+                <div class="settings-apply-progress">
+
+                    <div
+                        id="settingsApplyProgressBar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ESTADO: SUCESSO
+            ================================================== -->
+
+            <div
+                id="settingsSuccess"
+                class="settings-state-overlay"
+            >
+
+                <div class="settings-state-icon success">
+
+                    <i class="fa fa-check"></i>
+
+                </div>
+
+
+                <h3>
+                    Configurações aplicadas!
+                </h3>
+
+
+                <p>
+                    Suas preferências foram salvas
+                    com sucesso.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CARREGAMENTO DO MAPA
+    ====================================================== -->
+
+    <section
+        id="mapLoadingScreen"
+        class="map-loading-screen"
+    >
+
+        <div class="map-loading-content">
+
+            <div class="map-loading-icon">
+
+                <i class="fa fa-map-marker"></i>
+
+            </div>
+
+
+            <span class="map-loading-badge">
+
+                <i class="fa fa-circle"></i>
+
+                MÓDULO DE MAPA
+
+            </span>
+
+
+            <h1>
+                Carregando mapa
+            </h1>
+
+
+            <p>
+                Preparando o ambiente de localização segura.
+                O sistema ficará operacional em breve.
+            </p>
+
+
+            <div class="map-progress-wrapper">
+
+                <div class="map-progress-header">
+
+                    <span id="mapLoadingStatus">
+                        Inicializando mapa...
+                    </span>
+
+                    <strong id="mapLoadingPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="map-progress-track">
+
+                    <div
+                        id="mapLoadingProgress"
+                        class="map-progress-bar"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="map-loading-footer">
+
+                <i class="fa fa-shield"></i>
+
+                Conexão segura SYL
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAPA OPERACIONAL
+    ====================================================== -->
+
+    <section
+        id="mapScreen"
+        class="map-screen"
+    >
+
+        <header class="map-header">
+
+            <div class="map-header-logo">
+
+                <img
+                    src="https://raw.githubusercontent.com/aarinformatica/incuindopushsyl/refs/heads/main/newlogosyl.png"
+                    alt="Safe Your Life"
+                >
+
+            </div>
+
+
+            <div class="map-header-info">
+
+                <span class="map-status">
+
+                    <i class="fa fa-circle"></i>
+
+                    MAPA OPERACIONAL
+
+                </span>
+
+
+                <span id="mapUserName">
+                    Usuário
+                </span>
+
+            </div>
+
+
+            <button
+                id="closeMapButton"
+                class="map-close-button"
+                type="button"
+                title="Fechar mapa"
+            >
+
+                <i class="fa fa-times"></i>
+
+            </button>
+
+        </header>
+
+
+        <main class="map-main">
+
+            <div id="sylMap"></div>
+
+
+            <div class="map-location-card">
+
+                <div class="map-location-icon">
+
+                    <i class="fa fa-crosshairs"></i>
+
+                </div>
+
+
+                <div class="map-location-text">
+
+                    <strong>
+                        Sua localização
+                    </strong>
+
+                    <span id="mapLocationStatus">
+                        Localizando dispositivo...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="mapLocationLoading"
+                class="map-location-loading"
+            >
+
+                <i class="fa fa-circle-o-notch fa-spin"></i>
+
+                <span>
+                    Obtendo sua localização...
+                </span>
+
+            </div>
+
+        </main>
+
+
+        <footer class="map-footer">
+
+            <span>
+                © SYL - Todos os direitos reservados.
+            </span>
+
+            <span id="mapClock">
+                00:00:00
+            </span>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LEAFLET JS
+    ====================================================== -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <!-- =====================================================
+         ABLY
+    ====================================================== -->
+
+    <script src="https://cdn.ably.com/lib/ably.min-2.js"></script>
+
+
+    <!-- =====================================================
+         IMPORTANTE PARA O CODEPEN
+         
+         NÃO adicionar:
+         
+         <script src="syl.js"></script>
+         
+         O JavaScript completo deve ser colocado
+         diretamente no painel JavaScript do CodePen.
+    ====================================================== -->
+
+
+</body>
+
+</html>
